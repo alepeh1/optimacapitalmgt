@@ -1,0 +1,214 @@
+---
+const SITE = {
+  name: "Optima Capital Management",
+  phone: "(480)-378-6002",
+  email: "alexander_pehar@optimacapitalmgt.com",
+  cityList: ["Tempe", "Phoenix", "Scottsdale", "Mesa", "Chandler", "Gilbert", "Glendale"],
+  // TODO: replace these:
+  bookingUrl: "https://app.acuityscheduling.com/schedule/4531f7ad/appointment/73384947/calendar/any",
+  leadMagnetUrl: "/401k-cost-benchmark-report",
+  advUrl: "/disclosures",
+  privacyUrl: "/privacy",
+  logoSrc: "/images/ocm-logo.png",
+  heroHeadshot: "/images/headshot.jpg",
+  primaryCTA: "Get My Free Report",
+  secondaryCTA: "Book My Free Review",
+};
+const colors = {
+  blue: "#112D64",
+  green: "#13B0A9",
+  lightBlue: "#189DD8",
+  accent: "#546BE8",
+  white: "#FFFFFF",
+  beige: "#F6F6F6",
+  gray: "#38383b",
+  black: "#000000",
+};
+const title = "Tempe’s Trusted 401(k) Fiduciary Advisor for Small Businesses | Optima Capital Management";
+const description = "Local, CFP®-led 401(k) advisory for Arizona small businesses. Cost benchmarking, compliance oversight, and 1-on-1 employee education. Serving Tempe, Phoenix, Scottsdale, Mesa, Chandler, Gilbert, and Glendale.";
+const canonical = "https://www.yourdomain.com/";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="canonical" href={canonical} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <style>
+      :root{
+        --blue: {colors.blue};
+        --green: {colors.green};
+        --lightBlue: {colors.lightBlue};
+        --accent: {colors.accent};
+        --white: {colors.white};
+        --beige: {colors.beige};
+        --gray: {colors.gray};
+        --black: {colors.black};
+      }
+      *{box-sizing:border-box}
+      body{margin:0;font-family:"Source Sans 3", system-ui, -apple-system, Arial, sans-serif;color:var(--gray);background:var(--white)}
+      a{color:var(--accent);text-decoration:none}
+      header{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;border-bottom:1px solid #eee;background:#fff;position:sticky;top:0;z-index:20}
+      .brand{display:flex;gap:12px;align-items:center}
+      .brand img{height:40px}
+      .brand h1{font-size:18px;margin:0;color:var(--blue)}
+      .cta{display:flex;gap:10px;align-items:center}
+      .btn{display:inline-block;padding:12px 18px;border-radius:10px;font-weight:600}
+      .btn-primary{background:var(--blue);color:#fff}
+      .btn-outline{border:2px solid var(--blue);color:var(--blue)}
+      .hero{display:grid;grid-template-columns:1fr;gap:24px;padding:56px 20px;background:linear-gradient(180deg, #f9fbff 0%, #fff 100%)}
+      .hero h2{font-size:38px;line-height:1.15;margin:0;color:var(--blue)}
+      .hero p{font-size:18px;max-width:900px}
+      .hero .sub{color:#3b4e7a;font-weight:600;margin-top:6px}
+      .hero .row{display:flex;gap:14px;flex-wrap:wrap;margin-top:18px}
+      .section{padding:42px 20px}
+      .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:18px}
+      .card{border:1px solid #eee;border-radius:12px;padding:18px;background:#fff}
+      h3{margin:0 0 8px 0;color:var(--blue)}
+      h2{color:var(--blue);margin:0 0 8px 0}
+      ul{margin:10px 0 0 18px}
+      .cities{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+      .chip{background:var(--beige);border:1px solid #eee;padding:8px 12px;border-radius:999px}
+      .how{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:12px}
+      .how .step{border-left:4px solid var(--green);padding:12px;border-radius:8px;background:#fff;border:1px solid #eee}
+      .cta-panel{background:var(--blue);color:#fff;border-radius:14px;padding:24px;display:grid;gap:8px}
+      footer{border-top:1px solid #eee;padding:18px 20px;background:#fafafa;font-size:14px}
+      .grid{max-width:1120px;margin:0 auto}
+      .heroPic{max-width:220px;border-radius:12px;border:4px solid #eef2ff}
+      @media(min-width:900px){
+        .hero{grid-template-columns:1.4fr .6fr;align-items:center}
+      }
+      /* simple focus */
+      .btn:focus{outline:3px solid var(--green);outline-offset:2px}
+    </style>
+
+    <!-- JSON-LD: Local Financial Service -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"FinancialService",
+      "name":"Optima Capital Management",
+      "url": {JSON.stringify(canonical)},
+      "logo": {JSON.stringify(SITE.logoSrc)},
+      "image": {JSON.stringify(SITE.heroHeadshot)},
+      "areaServed": ["Tempe","Phoenix","Scottsdale","Mesa","Chandler","Gilbert","Glendale","Arizona"],
+      "telephone": {JSON.stringify(SITE.phone)},
+      "email": {JSON.stringify(SITE.email)},
+      "serviceType": "401(k) Advisory",
+      "slogan": "Tempe’s Trusted 401(k) Fiduciary Advisor for Small Businesses"
+    }
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="brand">
+        <img src={SITE.logoSrc} alt="Optima Capital Management logo" />
+        <h1>Optima Capital Management</h1>
+      </div>
+      <div class="cta">
+        <a class="btn btn-outline" href={SITE.leadMagnetUrl}>Free Cost Benchmark</a>
+        <a class="btn btn-primary" href={SITE.bookingUrl}>Book a Review</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="grid">
+          <h2>Tempe’s Trusted 401(k) Fiduciary Advisor for Small Businesses</h2>
+          <p class="sub">Serving Tempe, Phoenix, Scottsdale, Mesa, Chandler, Gilbert, and Glendale</p>
+          <p>
+            At <strong>Optima Capital Management</strong>, we help Arizona small businesses design, manage, and optimize their 401(k) plans—while protecting you as a fiduciary.
+            As a <strong>local, independent, CFP®-led advisory firm</strong>, we deliver cost benchmarking, compliance oversight, and 1-on-1 employee education that large national firms can’t match.
+            Whether you have 10 employees or 200, we make sure your retirement plan works for your business and your people.
+          </p>
+          <div class="row">
+            <a class="btn btn-primary" href={SITE.leadMagnetUrl}>{SITE.primaryCTA}</a>
+            <a class="btn btn-outline" href={SITE.bookingUrl}>{SITE.secondaryCTA}</a>
+          </div>
+        </div>
+        <div class="grid" style="display:flex;justify-content:center">
+          <img class="heroPic" src={SITE.heroHeadshot} alt="Your advisor headshot" />
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="grid">
+          <h2>Get Your Free 401(k) Cost Benchmark Report</h2>
+          <p><em>Know exactly how your plan compares in minutes.</em></p>
+          <ul>
+            <li>How your plan’s fees compare to Arizona and national averages</li>
+            <li>Whether your investment lineup is performing efficiently</li>
+            <li>Opportunities to improve employee engagement and retirement readiness</li>
+          </ul>
+          <div class="row" style="margin-top:12px">
+            <a class="btn btn-primary" href={SITE.leadMagnetUrl}>Get My Free Report</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="background:var(--beige)">
+        <div class="grid">
+          <h2>Why Arizona Businesses Choose Optima Capital Management</h2>
+          <div class="cards">
+            <div class="card">
+              <h3>Fiduciary Expertise You Can Trust</h3>
+              <p>We take on fiduciary responsibility so you can focus on running your business—while reducing risk and meeting compliance requirements.</p>
+            </div>
+            <div class="card">
+              <h3>1-on-1 Employee Access to CFP® Professionals</h3>
+              <p>Unlike large national providers, your employees get direct, personal financial guidance—not just generic call-center scripts.</p>
+            </div>
+            <div class="card">
+              <h3>In-House Research & Tailored Plan Design</h3>
+              <p>Every recommendation comes from in-house analysis backed by years of Arizona market experience.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="grid">
+          <h2>Who We Serve</h2>
+          <p>We work with small to mid-sized businesses (up to 200 employees) across Arizona.</p>
+          <div class="cities">
+            {SITE.cityList.map(c => <span class="chip">{c}</span>)}
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="background:var(--beige)">
+        <div class="grid">
+          <h2>How It Works</h2>
+          <div class="how">
+            <div class="step"><strong>1. Free Plan Review</strong><br/> We gather details on your current 401(k) plan.</div>
+            <div class="step"><strong>2. Cost Benchmark & Compliance Check</strong><br/> Compare fees, performance, and fiduciary risk against peers.</div>
+            <div class="step"><strong>3. Custom Action Plan</strong><br/> Clear recommendations to reduce costs, improve benefits, and engage employees.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="grid cta-panel">
+          <h2>Schedule Your Free 401(k) Review Today</h2>
+          <p>Make your 401(k) a competitive advantage for your business.</p>
+          <div class="row">
+            <a class="btn btn-outline" style="background:#fff;color:var(--blue)" href={SITE.bookingUrl}>Book My Free Review</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="grid">
+        <p><strong>{SITE.name}</strong> — Tempe, AZ & Greater Phoenix • <a href={`mailto:${SITE.email}`}>{SITE.email}</a> • {SITE.phone}</p>
+        <p style="margin:8px 0">Optima Capital Management, LLC is a registered investment adviser. Information is for educational purposes only and not investment advice.</p>
+        <p><a href={SITE.advUrl}>ADV Form</a> • <a href={SITE.privacyUrl}>Privacy Policy</a></p>
+      </div>
+    </footer>
+  </body>
+</html>
